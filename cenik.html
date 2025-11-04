@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceník – Jan Růžička</title>
+  <meta name="description" content="Ceník služeb Jana Růžičky – prověřování ojetých vozidel, kontrola, diagnostika a ověření historie.">
+  <meta name="robots" content="index, follow">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a4b78;
+      --bg: #f8f9fa;
+      --text: #222;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    nav .logo {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    h1 {
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 1rem 1.2rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    th {
+      background-color: #e9f2f9;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    td:last-child {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Jan Růžička</div>
+      <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="o-mne.html">O mně</a></li>
+        <li><a href="sluzby.html">Služby</a></li>
+        <li><a href="cenik.html">Ceník</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ceník služeb</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Služba</th>
+          <th>Cena</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pomoc s výběrem vhodného vozidla</td>
+          <td>1 500 Kč</td>
+        </tr>
+        <tr>
+          <td>Fyzická kontrola vozidla (karoserie, motor, převodovka, interiér, diagnostika)</td>
+          <td>3 400 Kč</td>
+        </tr>
+        <tr>
+          <td>Prověření historie vozidla (Cebia)</td>
+          <td>324 Kč</td>
+        </tr>
+        <tr>
+          <td>Dopravné</td>
+          <td>8 Kč / km</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note">Uvedené ceny jsou orientační a mohou se lišit podle rozsahu prověření nebo vzdálenosti.  
+    Všechny ceny jsou uvedeny včetně DPH.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Jan Růžička – Prověřování vozidel. Všechna práva vyhrazena.
+  </footer>
+</body>
+</html>
