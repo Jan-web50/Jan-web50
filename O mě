@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O mně – Jan Růžička</title>
+  <meta name="description" content="Jan Růžička – odborník na prověřování ojetých vozidel před koupí.">
+  <meta name="robots" content="index, follow">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a4b78;
+      --bg: #f8f9fa;
+      --text: #222;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    nav .logo {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    h1 {
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .about {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .about img {
+      width: 350px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .about-text p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Jan Růžička</div>
+      <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="o-mne.html">O mně</a></li>
+        <li><a href="sluzby.html">Služby</a></li>
+        <li><a href="cenik.html">Ceník</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>O mně</h1>
+
+    <div class="about">
+      <img src="20230719_092813.jpg" alt="Jan Růžička – prověřování vozidel">
+      <div class="about-text">
+        <p>Jmenuji se <strong>Jan Růžička</strong> a zabývám se prověřováním ojetých vozidel před koupí. 
+        Díky dlouholeté praxi v oboru dokážu odhalit skryté závady, stočené tachometry i problémy, které by vám mohly zkomplikovat koupi auta.</p>
+
+        <p>Mým cílem je, abyste za své peníze získali vůz v odpovídajícím technickém stavu a vyhnuli se nepříjemným překvapením po koupi.</p>
+
+        <p>Věřím, že férové jednání, pečlivost a technická odbornost jsou klíčem ke spokojenosti každého klienta.  
+        Pokud zvažujete koupi ojetého vozu, rád se postarám o jeho detailní kontrolu a poskytnu vám nezávislé doporučení.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Jan Růžička – Prověřování vozidel. Všechna práva vyhrazena.
+  </footer>
+</body>
+</html>
