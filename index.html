@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O mně – Jan Růžička</title>
-  <meta name="description" content="Jan Růžička – odborník na prověřování ojetých vozidel před koupí.">
+  <title>Jan Růžička – Prověřování vozidel</title>
+  <meta name="description" content="Prověřování ojetých vozidel před koupí. Nezávislé hodnocení technického stavu a historie vozu.">
   <meta name="robots" content="index, follow">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0a4b78;
+      --accent: #f4a261;
       --bg: #f8f9fa;
       --text: #222;
     }
@@ -22,6 +23,7 @@
       line-height: 1.6;
     }
 
+    /* Navigace */
     header {
       background-color: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -58,46 +60,69 @@
       color: var(--primary);
     }
 
-    main {
-      max-width: 1100px;
-      margin: 4rem auto;
-      padding: 0 2rem;
-    }
-    h1 {
-      color: var(--primary);
-      margin-bottom: 2rem;
-      font-size: 2rem;
+    /* Hero sekce */
+    .hero {
+      background: linear-gradient(to right, #e9f2f9, #f8f9fa);
+      padding: 6rem 2rem;
       text-align: center;
     }
-
-    .about {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .about img {
-      width: 350px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .about-text {
-      flex: 1;
-      min-width: 280px;
-    }
-    .about-text p {
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
       margin-bottom: 1rem;
-      font-size: 1.05rem;
-      color: #333;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: #444;
+    }
+    .hero a {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .hero a:hover {
+      background-color: #063455;
     }
 
+    /* Sekce výhod */
+    .features {
+      max-width: 1100px;
+      margin: 4rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    .feature {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-4px);
+    }
+    .feature h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Patička */
     footer {
       background-color: var(--primary);
       color: white;
       text-align: center;
       padding: 2rem 1rem;
-      margin-top: 4rem;
+      margin-top: 3rem;
       font-size: 0.9rem;
     }
   </style>
@@ -118,25 +143,30 @@
     </nav>
   </header>
 
-  <main>
-    <h1>O mně</h1>
+  <section class="hero">
+    <h1>Prověřování ojetých vozidel před koupí</h1>
+    <p>Pomohu vám s výběrem a kontrolou vozidla. Díky zkušenostem z praxe nabízím nezávislé zhodnocení technického stavu vozu i jeho historie.</p>
+    <a href="o-mne.html">Zjistit více</a>
+  </section>
 
-    <div class="about">
-      <img src="20230719_092813.jpg" alt="Jan Růžička – prověřování vozidel">
-      <div class="about-text">
-        <p>Jmenuji se <strong>Jan Růžička</strong> a zabývám se prověřováním ojetých vozidel před koupí. 
-        Díky dlouholeté praxi v oboru dokážu odhalit skryté závady, stočené tachometry i problémy, které by vám mohly zkomplikovat koupi auta.</p>
-
-        <p>Mým cílem je, abyste za své peníze získali vůz v odpovídajícím technickém stavu a vyhnuli se nepříjemným překvapením po koupi.</p>
-
-        <p>Věřím, že férové jednání, pečlivost a technická odbornost jsou klíčem ke spokojenosti každého klienta.  
-        Pokud zvažujete koupi ojetého vozu, rád se postarám o jeho detailní kontrolu a poskytnu vám nezávislé doporučení.</p>
-      </div>
+  <section class="features">
+    <div class="feature">
+      <h3>✅ Nezávislé posouzení</h3>
+      <p>Objektivní hodnocení vozu bez vlivu prodejce – vaše jistota při koupi ojetiny.</p>
     </div>
-  </main>
+    <div class="feature">
+      <h3>🔧 Technická kontrola</h3>
+      <p>Důkladná prohlídka motoru, karoserie, interiéru i elektroniky pomocí diagnostiky.</p>
+    </div>
+    <div class="feature">
+      <h3>📋 Historie vozidla</h3>
+      <p>Prověření servisní minulosti, pojistných událostí i ověření počtu najetých kilometrů.</p>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 Jan Růžička – Prověřování vozidel. Všechna práva vyhrazena.
   </footer>
 </body>
 </html>
+
