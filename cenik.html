@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Ceník – Jan Růžička | Prověřování ojetých vozidel</title>
-<meta name="description" content="Transparentní ceník služeb v oblasti prověřování ojetých vozidel. Férové ceny za odbornou kontrolu technického stavu, diagnostiku a prověření historie.">
-<meta name="keywords" content="ceník, cena prověření auta, kontrola vozidla, diagnostika, kontrola karoserie, prověření historie">
-<meta name="robots" content="index, follow">
 
-<meta property="og:title" content="Ceník – Jan Růžička | Prověřování ojetých vozidel">
-<meta property="og:description" content="Přehledný ceník služeb pro prověření ojetých vozidel. Férové ceny, žádné skryté poplatky.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.tva-domena.cz/cenik.html">
-<meta property="og:image" content="https://www.tva-domena.cz/img/seo-prev.jpg">
-<link rel="canonical" href="https://www.tva-domena.cz/cenik.html">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ceník – Jan Růžička</title>
-  <meta name="description" content="Ceník služeb Jana Růžičky – prověřování ojetých vozidel, kontrola, diagnostika a ověření historie.">
+  <meta name="description" content="Transparentní ceník služeb v oblasti prověřování ojetých vozidel. Férové ceny za odbornou kontrolu technického stavu, diagnostiku a prověření historie.">
+  <meta name="keywords" content="ceník, cena prověření auta, kontrola vozidla, diagnostika, kontrola karoserie, prověření historie">
   <meta name="robots" content="index, follow">
 
+  <meta property="og:title" content="Ceník – Jan Růžička | Prověřování ojetých vozidel">
+  <meta property="og:description" content="Přehledný ceník služeb pro prověření ojetých vozidel. Férové ceny, žádné skryté poplatky.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tva-domena.cz/cenik.html">
+  <meta property="og:image" content="https://www.tva-domena.cz/img/seo-prev.jpg">
+  <link rel="canonical" href="https://www.tva-domena.cz/cenik.html">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --primary: #0a4b78;
       --bg: #f8f9fa;
       --text: #222;
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
@@ -34,6 +35,7 @@
       line-height: 1.6;
     }
 
+    /* Header + navigace */
     header {
       background-color: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -41,40 +43,81 @@
       top: 0;
       z-index: 10;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 1rem 2rem;
+      padding: 1rem 1.2rem;
+      position: relative;
     }
-    nav .logo {
+
+    .logo {
       font-weight: 700;
       color: var(--primary);
       font-size: 1.2rem;
       text-transform: uppercase;
     }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
     }
+
     nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: 500;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: var(--primary);
     }
 
+    /* Mobilní menu – dropdown pod hamburgrem (varianta C) */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 60px;             /* pod hlavičkou */
+        right: 1.2rem;         /* zarovnané k hamburgru */
+        background: #fff;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        display: none;
+        width: auto;
+        min-width: 170px;
+        z-index: 20;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+
+    /* Obsah – ceník */
     main {
       max-width: 900px;
       margin: 4rem auto;
       padding: 0 2rem;
     }
+
     h1 {
       color: var(--primary);
       margin-bottom: 2rem;
@@ -90,19 +133,23 @@
       border-radius: 8px;
       overflow: hidden;
     }
+
     th, td {
       padding: 1rem 1.2rem;
       text-align: left;
       border-bottom: 1px solid #eee;
     }
+
     th {
       background-color: #e9f2f9;
       color: var(--primary);
       font-weight: 600;
     }
+
     tr:last-child td {
       border-bottom: none;
     }
+
     td:last-child {
       text-align: right;
       font-weight: 600;
@@ -123,6 +170,15 @@
       margin-top: 4rem;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 0 1rem;
+      }
+      th, td {
+        padding: 0.8rem 0.9rem;
+      }
+    }
   </style>
 </head>
 
@@ -130,6 +186,7 @@
   <header>
     <nav>
       <div class="logo">Jan Růžička</div>
+      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</div>
       <ul>
         <li><a href="index.html">Domů</a></li>
         <li><a href="o-mne.html">O mně</a></li>
@@ -171,8 +228,10 @@
       </tbody>
     </table>
 
-    <p class="note">Uvedené ceny jsou orientační a mohou se lišit podle rozsahu prověření nebo vzdálenosti.  
-    Všechny ceny jsou uvedeny včetně DPH.</p>
+    <p class="note">
+      Uvedené ceny jsou orientační a mohou se lišit podle rozsahu prověření nebo vzdálenosti.<br>
+      Všechny ceny jsou uvedeny včetně DPH.
+    </p>
   </main>
 
   <footer>
