@@ -92,25 +92,32 @@
     nav a:hover { color: var(--primary); }
 
     /* Responsive menu */
-    @media (max-width: 768px) {
-      nav ul {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        padding: 1rem 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      }
-      nav ul.show {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
+    /* Responsive menu – dropdown přímo pod hamburgrem */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;              /* těsně pod headerem */
+    right: 1.2rem;          /* zarovnáno k hamburgru */
+    background: #fff;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    display: none;
+    width: auto;            /* jen tak široké, jak je potřeba */
+    min-width: 170px;       /* aby to nebylo moc úzké */
+    z-index: 20;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
 
     .hero {
       background: linear-gradient(to right, #e9f2f9, #f8f9fa);
