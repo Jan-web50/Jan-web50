@@ -109,7 +109,7 @@
       color: var(--primary);
     }
 
-    /* Mobilní menu */
+    /* Mobilní menu – DROPDOWN pod hamburgrem (varianta C) */
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -117,14 +117,18 @@
 
       nav ul {
         position: absolute;
-        top: 60px;
-        right: 0;
+        top: 60px;             /* pod hlavičkou */
+        right: 1.2rem;         /* zarovnané k hamburgru */
         background: #fff;
         flex-direction: column;
-        width: 100%;
+        gap: 0.75rem;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         display: none;
-        padding: 1rem 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: auto;
+        min-width: 170px;
+        z-index: 20;
       }
 
       nav ul.show {
