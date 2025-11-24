@@ -1,198 +1,191 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <title>Jan Růžička – Prověřování ojetých vozidel</title>
-<meta name="description" content="Prověřování ojetých vozidel před koupí. Nezávislé hodnocení technického stavu a historie vozu. Pomoc s výběrem auta, diagnostika, kontrola karoserie a motoru.">
-<meta name="keywords" content="prověřování vozidel, kontrola auta, technický stav, Cebia, ojetiny, Jan Růžička, prověření vozidla, koupě auta">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Jan Růžička">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Prověřování ojetých vozidel – nezávislé posouzení technického stavu, diagnostika a kontrola historie." />
+    <title>Jan Růžička – Prověřování ojetých vozidel</title>
 
-<meta property="og:title" content="Jan Růžička – Prověřování ojetých vozidel">
-<meta property="og:description" content="Nezávislé prověřování technického stavu a historie ojetých vozidel. Pomoc s výběrem auta a jistota při koupi.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.tva-domena.cz/">
-<meta property="og:image" content="https://www.tva-domena.cz/img/seo-prev.jpg">
-<link rel="canonical" href="https://www.tva-domena.cz/">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --text-dark: #222;
+            --text-light: #555;
+            --bg-light: #f5f5f5;
+            --max-width: 1100px;
+        }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Jan Růžička – Prověřování vozidel",
-  "url": "https://www.tva-domena.cz/",
-  "telephone": "+420777320821",
-  "email": "ruzickahonza@centrum.cz",
-  "description": "Prověřování ojetých vozidel před koupí – kontrola technického stavu, historie a servisních záznamů.",
-  "areaServed": "Česká republika"
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 15px;
+        }
+
+        nav a.logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Mobile menu */
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                width: 100%;
+                padding: 20px;
+                border-top: 1px solid #ddd;
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+        }
+
+        .hero {
+            background: var(--bg-light);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .section {
+            max-width: var(--max-width);
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--bg-light);
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#" class="logo">Jan Růžička</a>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <ul id="menu">
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#cenik">Ceník</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Prověřování ojetých vozidel</h1>
+    <p>Pomohu vám s výběrem a kontrolou vozidla. Nabízím nezávislé zhodnocení technického stavu vozu a jeho historie.</p>
+</section>
+
+<section id="sluzby" class="section">
+    <h2>Služby</h2>
+    <div class="features">
+        <div class="box">Fyzická kontrola vozu</div>
+        <div class="box">Diagnostika</div>
+        <div class="box">Kontrola historie a pojistných událostí</div>
+    </div>
+</section>
+
+<section id="cenik" class="section">
+    <h2>Ceník</h2>
+    <p>Transparentní ceník služeb v oblasti prověřování vozidel.</p>
+</section>
+
+<section id="kontakt" class="section">
+    <h2>Kontakt</h2>
+    <p>Telefon: +420 777 320 821<br>E-mail: ruzickahonza@centrum.cz</p>
+</section>
+
+<footer>
+    © 2025 Jan Růžička – Prověřování vozidel
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('open');
 }
 </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prověření vozidla před koupí – Jan Růžička</title>
-  <meta name="description" content="Pomohu vám s výběrem ojetého vozidla. Prověřím historii, pojistné události, technický stav a provedu diagnostiku. Jan Růžička – odborník na kontrolu vozidel.">
-  <meta name="keywords" content="prověření vozidla, kontrola auta před koupí, diagnostika vozidla, prověření ojetin, Jan Růžička, kontrola vozu, ověření historie auta">
-  <meta name="robots" content="index, follow">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #0a4b78;
-      --accent: #f4a261;
-      --bg: #f8f9fa;
-      --text: #222;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    /* Navigace */
-    header {
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-    }
-    nav .logo {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 1.2rem;
-      text-transform: uppercase;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    /* Hero sekce */
-    .hero {
-      background: linear-gradient(to right, #e9f2f9, #f8f9fa);
-      padding: 6rem 2rem;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      color: #444;
-    }
-    .hero a {
-      display: inline-block;
-      background-color: var(--primary);
-      color: white;
-      padding: 0.9rem 2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
-    .hero a:hover {
-      background-color: #063455;
-    }
-
-    /* Sekce výhod */
-    .features {
-      max-width: 1100px;
-      margin: 4rem auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 0 2rem;
-    }
-    .feature {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .feature:hover {
-      transform: translateY(-4px);
-    }
-    .feature h3 {
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    /* Patička */
-    footer {
-      background-color: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="logo">Jan Růžička</div>
-      <ul>
-        <li><a href="index.html">Domů</a></li>
-        <li><a href="o-mne.html">O mně</a></li>
-        <li><a href="sluzby.html">Služby</a></li>
-        <li><a href="cenik.html">Ceník</a></li>
-        <li><a href="reference.html">Reference</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Prověřování ojetých vozidel před koupí</h1>
-    <p>Pomohu vám s výběrem a kontrolou vozidla. Nabízím nezávislé zhodnocení technického stavu vozu a jeho historie.</p>
-    <a href="o-mne.html">Zjistit více</a>
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <h3>✅ Nezávislé posouzení</h3>
-      <p>Objektivní hodnocení vozu bez vlivu prodejce – větší jistota při koupi ojetého vozu.</p>
-    </div>
-    <div class="feature">
-      <h3>🔧 Fyzická kontrola vozidla</h3>
-      <p>Systematická kontrola vozidla na místě.</p>
-    </div>
-    <div class="feature">
-      <h3>📋 Historie vozidla</h3>
-      <p>Prověření servisní historie, prověření pojistných událostí s využitím služby Cebia.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Jan Růžička – Prověřování vozidel. Všechna práva vyhrazena.
-  </footer>
 </body>
 </html>
