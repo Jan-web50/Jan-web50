@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>O mně – Jan Růžička | Prověřování vozidel</title>
-<meta name="description" content="Jmenuji se Jan Růžička a specializuji se na nezávislé prověřování ojetých vozidel. Mým cílem je, abyste koupili auto v dobrém stavu a bez skrytých vad.">
-<meta name="keywords" content="Jan Růžička, o mně, prověřování aut, kontrola vozidel, technik, diagnostika, ojetiny">
-<meta name="robots" content="index, follow">
+  <meta name="description" content="Jmenuji se Jan Růžička a specializuji se na nezávislé prověřování ojetých vozidel. Mým cílem je, abyste koupili auto v dobrém stavu a bez skrytých vad.">
+  <meta name="keywords" content="Jan Růžička, o mně, prověřování aut, kontrola vozidel, technik, diagnostika, ojetiny">
+  <meta name="robots" content="index, follow">
 
-<meta property="og:title" content="O mně – Jan Růžička | Prověřování vozidel">
-<meta property="og:description" content="Nezávislý technik Jan Růžička – kontrola a prověření ojetých vozidel před koupí.">
-<meta property="og:type" content="profile">
-<meta property="og:url" content="https://www.tva-domena.cz/o-mne.html">
-<meta property="og:image" content="https://www.tva-domena.cz/img/seo-prev.jpg">
-<link rel="canonical" href="https://www.tva-domena.cz/o-mne.html">
+  <meta property="og:title" content="O mně – Jan Růžička | Prověřování vozidel">
+  <meta property="og:description" content="Nezávislý technik Jan Růžička – kontrola a prověření ojetých vozidel před koupí.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://www.tva-domena.cz/o-mne.html">
+  <meta property="og:image" content="https://www.tva-domena.cz/img/seo-prev.jpg">
+  <link rel="canonical" href="https://www.tva-domena.cz/o-mne.html">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O mně – Jan Růžička</title>
-  <meta name="description" content="Jan Růžička – odborník na prověřování ojetých vozidel před koupí.">
-  <meta name="robots" content="index, follow">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -47,7 +44,8 @@
       align-items: center;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 1rem 2rem;
+      padding: 1rem 1.2rem;
+      position: relative;
     }
     nav .logo {
       font-weight: 700;
@@ -55,6 +53,13 @@
       font-size: 1.2rem;
       text-transform: uppercase;
     }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -68,6 +73,33 @@
     }
     nav a:hover {
       color: var(--primary);
+    }
+
+    /* Mobilní menu – dropdown pod hamburgrem (stejně jako kontakt/index) */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 60px;             /* pod hlavičkou */
+        right: 1.2rem;         /* zarovnané k hamburgru */
+        background: #fff;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        display: none;
+        width: auto;
+        min-width: 170px;
+        z-index: 20;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
     }
 
     main {
@@ -88,16 +120,15 @@
       gap: 2rem;
       flex-wrap: wrap;
     }
-    
-     .about img {
-  width: 220px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  margin: 0.5rem 0 1rem;
-}
 
+    .about img {
+      width: 220px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      margin: 0.5rem 0 1rem;
     }
+
     .about-text {
       flex: 1;
       min-width: 280px;
@@ -116,6 +147,12 @@
       margin-top: 4rem;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 0 1rem;
+      }
+    }
   </style>
 </head>
 
@@ -123,6 +160,7 @@
   <header>
     <nav>
       <div class="logo">Jan Růžička</div>
+      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</div>
       <ul>
         <li><a href="index.html">Domů</a></li>
         <li><a href="o-mne.html">O mně</a></li>
@@ -155,3 +193,4 @@
   </footer>
 </body>
 </html>
+
