@@ -84,7 +84,7 @@
       color: var(--primary);
     }
 
-    /* Mobilní menu – dropdown pod hamburgrem (varianta C) */
+    /* Mobilní menu – dropdown pod hamburgram */
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -92,8 +92,8 @@
 
       nav ul {
         position: absolute;
-        top: 60px;             /* pod hlavičkou */
-        right: 1.2rem;         /* zarovnané k hamburgru */
+        top: 60px;
+        right: 1.2rem;
         background: #fff;
         flex-direction: column;
         gap: 0.75rem;
@@ -153,6 +153,12 @@
     td:last-child {
       text-align: right;
       font-weight: 600;
+    }
+
+    /* ✅ zabrání zalamování ceny a km */
+    th:last-child,
+    td:last-child {
+      white-space: nowrap;
     }
 
     .note {
