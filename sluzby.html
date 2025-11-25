@@ -86,6 +86,7 @@
       display: none;
       font-size: 1.8rem;
       cursor: pointer;
+      user-select: none;
     }
 
     /* Mobile menu */
@@ -157,7 +158,10 @@
   <header>
     <nav>
       <div class="logo">Jan Růžička</div>
-      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</div>
+
+      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
+        ☰
+      </div>
 
       <ul>
         <li><a href="index.html">Domů</a></li>
