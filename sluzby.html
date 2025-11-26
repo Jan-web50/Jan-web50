@@ -7,28 +7,26 @@
   <meta name="keywords" content="služby, prověření auta, kontrola karoserie, měření laku, diagnostika, pojistné události, servisní historie">
   <meta name="robots" content="index, follow">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Služby – Jan Růžička | Prověřování vozidel před koupí">
   <meta property="og:description" content="Prověření servisní historie, fyzická kontrola vozu, měření tloušťky laku, diagnostika a kontrola motoru.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tva-domena.cz/sluzby.html">
   <meta property="og:image" content="https://www.tva-domena.cz/img/seo-prev.jpg">
+
   <link rel="canonical" href="https://www.tva-domena.cz/sluzby.html">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --primary: #0a4b78;
       --bg: #f8f9fa;
       --text: #222;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -37,7 +35,7 @@
       line-height: 1.6;
     }
 
-    /* Header */
+    /* HEADER */
     header {
       background-color: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -63,7 +61,6 @@
       text-transform: uppercase;
     }
 
-    /* Desktop menu */
     nav ul {
       list-style: none;
       display: flex;
@@ -76,12 +73,9 @@
       font-weight: 500;
       transition: color 0.3s;
     }
+    nav a:hover { color: var(--primary); }
 
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    /* Hamburger */
+    /* HAMBURGER */
     .menu-toggle {
       display: none;
       font-size: 1.8rem;
@@ -89,7 +83,7 @@
       user-select: none;
     }
 
-    /* Mobile menu */
+    /* RESPONSIVE MENU – varianta C (stejné jako index.html) */
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -98,13 +92,17 @@
       nav ul {
         position: absolute;
         top: 60px;
-        right: 0;
+        right: 1.2rem;
         background: #fff;
         flex-direction: column;
-        width: 100%;
+        gap: 0.75rem;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         display: none;
-        padding: 1rem 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        min-width: 170px;
+        width: auto;
+        z-index: 20;
       }
 
       nav ul.show {
@@ -112,7 +110,7 @@
       }
     }
 
-    /* Content */
+    /* CONTENT */
     main {
       max-width: 900px;
       margin: 4rem auto;
@@ -137,12 +135,10 @@
     }
 
     @media (max-width: 600px) {
-      main {
-        padding: 0 1rem;
-      }
+      main { padding: 0 1rem; }
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
       background-color: var(--primary);
       color: white;
@@ -159,9 +155,7 @@
     <nav>
       <div class="logo">Jan Růžička</div>
 
-      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
-        ☰
-      </div>
+      <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</div>
 
       <ul>
         <li><a href="index.html">Domů</a></li>
@@ -185,11 +179,11 @@
         Fyzická kontrola vozidla na místě, která zahrnuje:
         <ul>
           <li>Kontrola karoserie a měření tloušťky laku</li>
-          <li>Kontrola motoru a převodovky z hlediska správné funkce, poškození a úniku provozních kapalin</li>
-          <li>Kontrola podvozku, brzd, disků kol a pneumatik</li>
+          <li>Kontrola motoru a převodovky z hlediska funkce, poškození a úniku kapalin</li>
+          <li>Kontrola podvozku, brzd, disků kola a pneumatik</li>
           <li>Kontrola interiéru a komfortních funkcí</li>
           <li>Diagnostika – vyčtení paměti závad řídících jednotek</li>
-          <li>Měření hodnot dle typu vozidla (např. korekční dávky na vstřikovačích)</li>
+          <li>Měření hodnot dle typu vozidla (např. korekční dávky vstřikovačů)</li>
         </ul>
       </li>
     </ul>
